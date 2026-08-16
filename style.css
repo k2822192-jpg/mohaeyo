@@ -1,19 +1,19 @@
 :root {
-  --bg: #14101E;
-  --surface: #1D1830;
-  --surface-2: #241D3B;
-  --ink: #F6F0E8;
-  --ink-soft: #B7ADC7;
-  --ink-faint: #7C7495;
-  --accent: #FF8F6B;
-  --accent-strong: #FF7050;
-  --accent-2: #7BD9C4;
-  --line: rgba(246, 240, 232, 0.12);
-  --shadow: 0 20px 60px -30px rgba(0,0,0,0.6);
+  --bg: #FFE9DE;
+  --surface: #FFFFFF;
+  --surface-2: #FFF3EC;
+  --ink: #3A2620;
+  --ink-soft: #7C5C52;
+  --ink-faint: #B08A7E;
+  --accent: #FF6F4D;
+  --accent-strong: #FF5630;
+  --on-accent: #FFFFFF;
+  --accent-2: #FF8FAE;
+  --on-accent-2: #3A2620;
+  --line: rgba(58, 38, 32, 0.12);
+  --shadow: 0 20px 50px -28px rgba(120, 60, 40, 0.28);
 
-  --font-display: 'Fraunces', 'Noto Serif KR', 'Noto Serif SC', 'Noto Serif JP', Georgia, serif;
-  --font-body: 'Manrope', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans SC', 'Noto Sans JP', -apple-system, system-ui, sans-serif;
-  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font: 'Quicksand', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans SC', 'Noto Sans JP', -apple-system, system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -27,7 +27,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-body);
+  font-family: var(--font);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -54,7 +54,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 /* ---- Header ---- */
 .site-header {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(20, 16, 30, 0.85);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -63,7 +63,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   padding-top: 16px; padding-bottom: 16px;
 }
 .brand {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-weight: 600; font-size: 20px;
   text-decoration: none; letter-spacing: -0.01em;
   display: inline-flex; align-items: baseline;
@@ -81,14 +81,14 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 8px 10px;
-  font-family: var(--font-body);
+  font-family: var(--font);
   font-size: 13px;
   cursor: pointer;
 }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--font-body); font-weight: 700; font-size: 14px;
+  font-family: var(--font); font-weight: 700; font-size: 14px;
   padding: 10px 18px; border-radius: 999px;
   text-decoration: none; border: none; cursor: pointer;
   transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
@@ -97,7 +97,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .btn:hover { transform: translateY(-1px); }
 .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .btn-ghost:hover { border-color: var(--accent); }
-.btn-accent { background: var(--accent); color: #1A1210; }
+.btn-accent { background: var(--accent); color: var(--on-accent); }
 .btn-accent:hover { background: var(--accent-strong); }
 
 /* ---- Hero ---- */
@@ -112,7 +112,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 }
 
 .kicker {
-  font-family: var(--font-mono);
+  font-family: var(--font);
   font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--accent-2);
   margin: 0 0 18px;
@@ -120,7 +120,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .kicker-center { text-align: center; margin: 0 auto 12px; }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-weight: 600;
   font-size: clamp(32px, 5vw, 52px);
   line-height: 1.15;
@@ -147,7 +147,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   color: var(--ink);
   border-radius: 999px;
   padding: 12px 18px;
-  font-family: var(--font-body);
+  font-family: var(--font);
   font-size: 14px;
 }
 .signup-form input[type="email"]::placeholder { color: var(--ink-faint); }
@@ -178,7 +178,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .bubble {
   border-radius: 16px;
   padding: 14px 16px;
-  font-family: var(--font-body);
+  font-family: var(--font);
   font-size: 16px;
   font-weight: 600;
   position: relative;
@@ -190,14 +190,14 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   border-bottom-left-radius: 4px;
 }
 .bubble-to {
-  background: var(--accent);
-  color: #1A1210;
+  background: var(--accent-2);
+  color: var(--on-accent-2);
   align-self: flex-end;
   border-bottom-right-radius: 4px;
 }
 .bubble-lang {
   display: block;
-  font-family: var(--font-mono);
+  font-family: var(--font);
   font-size: 10px;
   letter-spacing: 0.06em;
   opacity: 0.65;
@@ -205,7 +205,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 }
 .translate-arrow {
   align-self: center;
-  font-family: var(--font-mono);
+  font-family: var(--font);
   font-size: 11px;
   color: var(--ink-faint);
   display: flex; align-items: center; gap: 6px;
@@ -224,7 +224,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   padding: 26px 24px;
 }
 .value-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font);
   font-weight: 600;
   font-size: 19px;
   margin: 0 0 10px;
@@ -247,12 +247,12 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   display: inline-flex; align-items: center; justify-content: center;
   width: 34px; height: 34px; border-radius: 50%;
   background: var(--surface-2); border: 1px solid var(--line);
-  font-family: var(--font-mono); font-size: 14px; font-weight: 700;
+  font-family: var(--font); font-size: 14px; font-weight: 700;
   color: var(--accent-2);
   margin-bottom: 14px;
 }
 .how-step h4 {
-  font-family: var(--font-display); font-weight: 600; font-size: 17px;
+  font-family: var(--font); font-weight: 600; font-size: 17px;
   margin: 0 0 6px;
 }
 .how-step p { color: var(--ink-soft); font-size: 14px; margin: 0; }
@@ -266,7 +266,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 }
 .trust-inner { max-width: 640px; text-align: center; }
 .trust h2 {
-  font-family: var(--font-display); font-weight: 600;
+  font-family: var(--font); font-weight: 600;
   font-size: clamp(24px, 3.4vw, 32px);
   margin: 0 0 16px;
   text-wrap: balance;
@@ -277,7 +277,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .footer-cta { padding: 80px 0; }
 .footer-cta-inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .footer-cta-inner h2 {
-  font-family: var(--font-display); font-weight: 600;
+  font-family: var(--font); font-weight: 600;
   font-size: clamp(24px, 3.6vw, 34px);
   margin: 0 0 28px; max-width: 20ch;
   text-wrap: balance;
@@ -295,6 +295,6 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   color: var(--ink-faint); font-size: 13px;
 }
 .brand-small {
-  font-family: var(--font-display); font-weight: 600; color: var(--ink-soft);
+  font-family: var(--font); font-weight: 600; color: var(--ink-soft);
   display: inline-flex; align-items: baseline;
 }
