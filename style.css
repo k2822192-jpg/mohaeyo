@@ -66,6 +66,12 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   font-family: var(--font-display);
   font-weight: 600; font-size: 20px;
   text-decoration: none; letter-spacing: -0.01em;
+  display: inline-flex; align-items: baseline;
+}
+.brand-q {
+  color: var(--accent);
+  font-style: italic;
+  margin-left: 1px;
 }
 .header-actions { display: flex; align-items: center; gap: 14px; }
 
@@ -288,4 +294,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   flex-wrap: wrap; gap: 10px;
   color: var(--ink-faint); font-size: 13px;
 }
-.brand-small { font-family: var(--font-display); font-weight: 600; color: var(--ink-soft); }
+.brand-small {
+  font-family: var(--font-display); font-weight: 600; color: var(--ink-soft);
+  display: inline-flex; align-items: baseline;
+}
